@@ -9,7 +9,7 @@ ENV MAVEN_HOME=/usr/share/maven
 #Create an untrusted user entando and install all prerequisites
 USER root
 RUN useradd -ms /bin/bash entando \
-&& yum install -y curl maven imagemagick wget \
+&& yum install -y curl maven imagemagick wget git \
 && cd /opt \
 && wget --no-cookies --no-check-certificate --header \
 "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
