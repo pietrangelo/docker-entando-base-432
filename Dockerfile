@@ -1,6 +1,6 @@
 FROM openjdk:8-slim
 
-LABEL mainteiner="Pietrangelo Masala <p.masala@entando.com>"
+LABEL maintainer="Pietrangelo Masala <p.masala@entando.com>"
 
 #Environment Variables
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
