@@ -16,11 +16,7 @@ USER 1001
 
 # Install entando dependencies (core, components, archetypes)
 RUN cd /opt/entando \
-&& git clone https://github.com/entando/entando-core.git \
-&& git clone https://github.com/entando/entando-components.git \
-&& git clone https://github.com/entando/entando-archetypes.git \
-&& cd entando-core && mvn -Dmaven.repo.local=/opt/entando/.m2/repository install -DskipTests && mvn clean && cd .. \
-&& cd entando-components && mvn -Dmaven.repo.local=/opt/entando/.m2/repository install -DskipTests && mvn clean && cd .. \
+&& git clone https://github.com/entando/entando-archetypes.git --branch v5.3.1 \
 && cd entando-archetypes && mvn -Dmaven.repo.local=/opt/entando/.m2/repository install -DskipTests && mvn clean && cd .. \
 && chmod 777 -R /opt/entando/.m2/repository/ \
 && rm -rf entando-*
